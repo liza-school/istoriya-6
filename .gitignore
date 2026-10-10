@@ -10,6 +10,5 @@ desktop.ini
 # Local textbook extraction and validation files.
 tmp/
 
-# Локальні нотатки й скрипти публікації іншого агента — не частина курсу.
-HANDOFF.md
+# Старі скрипти першої публікації (Codex) — локальні.
 publish/

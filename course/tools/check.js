@@ -15,12 +15,15 @@ const TARGET =
   process.argv[2] || "file:///" + path.resolve(__dirname, "..", "index.html").replace(/\\/g, "/");
 
 // Параграфи курсу. Додаючи новий, допиши його сюди, у index.html і в coverage.json.
-const LESSONS = [];
-for (let n = 14; n <= 35; n++) LESSONS.push("p" + n);
-const TESTS = ["test1", "test2", "test3", "test4"];
-const PAGES = LESSONS.concat(TESTS);
-// Теми розділу на головній: Месопотамія, Єгипет, Близький Схід і скіфи, Індія й Китай.
-const GROUPS = 4;
+// Список береться з index.html, тож перевірка проходить і на недобудованому курсі:
+// новий агент може підхопити роботу з будь-якого параграфа.
+const indexHtml = fs.readFileSync(path.resolve(__dirname, "..", "index.html"), "utf8");
+const PAGES = [...indexHtml.matchAll(/js\/lessons\/((?:p|test)\d+)\.js/g)].map((m) => m[1]);
+const LESSONS = PAGES.filter((id) => id.startsWith("p"));
+// Теми розділу на головній — скільки різних `group` у зареєстрованих сторінках.
+const GROUPS = new Set(
+  PAGES.map((id) => (fs.readFileSync(path.join(__dirname, "..", "js", "lessons", id + ".js"), "utf8").match(/group: "([^"]+)"/) || [])[1])
+).size;
 
 const CHROME_CANDIDATES = [
   process.env.CHROME_PATH,

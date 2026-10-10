@@ -1,5 +1,7 @@
 # Repository Guidelines
 
+Start with `HANDOFF.md`: current state, next paragraph, and the per-paragraph checklist. Update it after every paragraph — work may be resumed by another agent at any time.
+
 ## Project Structure & Module Organization
 
 This is a Ukrainian sixth-grade history course built with plain HTML, CSS, and JavaScript. `course/index.html` loads the shared renderer and lesson scripts. `course/js/engine.js` handles routing, question checking, and browser progress. Lessons live in `course/js/lessons/`, styles in `course/css/app.css`, and textbook illustrations in `course/img/`. `course/tools/` contains browser checks, required-content lists (`coverage.json`), and textbook corrections (`errata.json`).
