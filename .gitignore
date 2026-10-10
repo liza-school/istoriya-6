@@ -1,0 +1,15 @@
+# Повний підручник лишається локально; ілюстрації курсу — у course/img/.
+# Правила роботи з PDF: .claude/skills/istoriya6-materials/SKILL.md.
+*.pdf
+
+# Сміття ОС
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local textbook extraction and validation files.
+tmp/
+
+# Локальні нотатки й скрипти публікації іншого агента — не частина курсу.
+HANDOFF.md
+publish/
