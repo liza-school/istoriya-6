@@ -30,8 +30,7 @@ for (const name of onDisk) assert(registered.has(name), "lesson file not registe
 const pages = new Map();
 const kinds = ["quiz", "multi", "order", "input"];
 const sidebars = ["cherkasy", "ukraine", "potter", "horse", "life", "game"];
-// `onepiece` — наскрізна врізка-місток до аніме, не обов’язкова (на відміну від шести sidebars).
-const supported = new Set(["text", "note", "errata", "image", "gallery", "terms", "summary", "fold", "onepiece", ...sidebars, ...kinds]);
+const supported = new Set(["text", "note", "errata", "image", "gallery", "terms", "summary", "fold", ...sidebars, ...kinds]);
 let questions = 0;
 let images = 0;
 const missingContent = [];

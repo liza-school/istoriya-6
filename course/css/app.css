@@ -247,8 +247,9 @@ li { margin: 4px 0; }
 .block.potter .tag { background: var(--potter); color: #fff; }
 .block.horse { background: var(--horse-soft); border-color: var(--horse); }
 .block.horse .tag { background: var(--horse); color: #fff; }
-.block.onepiece { background: var(--onepiece-soft); border-color: var(--onepiece); }
-.block.onepiece .tag { background: var(--onepiece); color: #fff; }
+/* Репліка про One Piece вплетена прямо в речення підручника — не окрема картка,
+   а легка інлайн-підсвітка: факт і аніме переплітаються в одному абзаці. */
+.op { background: var(--onepiece-soft); box-shadow: inset 0 -2px 0 var(--onepiece); border-radius: 3px; padding: 0 .15em; }
 .block.errata { background: var(--red-soft); border-color: var(--red); }
 .block.errata .tag { background: var(--red); color: #fff; }
 

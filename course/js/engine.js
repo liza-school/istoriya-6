@@ -97,10 +97,6 @@ const COURSE = (function () {
     /* Стайня: те саме поняття на конях, яких дитина бачить щотижня. */
     horse: (b) => card("horse", b.title || "А тепер — на конях", null, [el("div", { html: b.html })]),
 
-    /* One Piece: місток до аніме, яке дитина любить. Герої й антагоніти лише допомагають
-       запам’ятати поняття; наприкінці завжди межа — чим казка відрізняється від історії. */
-    onepiece: (b) => card("onepiece", b.title || "А тепер — у One Piece", null, [el("div", { html: b.html })]),
-
     /* Місце, де підручник помиляється: що в книжці, як насправді, що казати на уроці. */
     errata: (b) =>
       card("errata", b.title || "Тут підручник помиляється", null, [
@@ -371,7 +367,6 @@ const COURSE = (function () {
     game: "з гри",
     potter: "Гоґвортс",
     horse: "коні",
-    onepiece: "One Piece",
     errata: "увага",
     terms: "терміни",
     summary: "підсумок",
